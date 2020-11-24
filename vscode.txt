@@ -1,0 +1,48 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    // "editor.lineNumbers": "relative",
+    "editor.fontLigatures": true,
+    "terminal.external.osxExec": "iterm2",
+    "window.zoomLevel": 0,
+    "workbench.colorCustomizations": {       
+        "statusBar.background": "#222222",
+    },
+    "eslint.workingDirectories": [
+        "./client"
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.tabSize": 2,
+    "workbench.editor.labelFormat": "short",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "diffEditor.ignoreTrimWhitespace": true,
+    "cSpell.userWords": [
+        "Formik",
+        "extraversion"
+    ],
+    "[json]": {
+    },
+    "editor.fontFamily": "Firacode-retina, Menlo, Monaco, 'Courier New', monospace",
+    "git.autofetch": true,
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+    "typescript.disableAutomaticTypeAcquisition": true,
+    "workbench.editorAssociations": [
+    
+    ],
+    "notebook.kernelProviderAssociations": [
+    
+    ],
+    "editor.fontSize": 12.5,
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.settings.editor": "json",
+    "workbench.editor.showTabs": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
