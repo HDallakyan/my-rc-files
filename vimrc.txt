@@ -1,0 +1,68 @@
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'dracula/vim', { 'name': 'dracula' }
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'dense-analysis/ale'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'ycm-core/YouCompleteMe'
+Plug 'jiangmiao/auto-pairs'
+Plug 'airblade/vim-gitgutter'
+Plug 'kien/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'editorconfig/editorconfig-vim'
+call plug#end()
+
+let g:dracula_colorterm = 0
+let g:dracula_italic = 0
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:mapleader=','
+let g:NERDTreeShowLineNumbers=1
+
+colorscheme dracula
+
+syntax on
+set relativenumber
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set nopaste
+set hlsearch
+set incsearch
+set wildignore=*/node_modules/*
+set backspace=indent,eol,start
+
+" Switch off all auto-indenting
+" set nocindent
+" set nosmartindent
+" set noautoindent
+" set indentexpr=
+filetype indent off
+" filetype plugin indent off
+
+"mappings
+
+map <leader>f :NERDTreeFind<cr>
+map <C-n> :NERDTreeToggle<CR>
+map <Leader> <Plug>(easymotion-prefix)
+
+map <silent> <C-h> :call WinMove('h')<CR>
+map <silent> <C-j> :call WinMove('j')<CR>
+map <silent> <C-k> :call WinMove('k')<CR>
+map <silent> <C-l> :call WinMove('l')<CR>
+
+function! WinMove(key)
+        let t:curwin = winnr()
+        exec "wincmd ".a:key
+        if (t:curwin == winnr())
+                if (match(a:key, '[jk]'))
+                        wincmd v
+                else
+                        wincmd s
+                endif
+        exec "wincmd ".a:key
+endif
+endfunction
